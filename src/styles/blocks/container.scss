@@ -1,15 +1,7 @@
 .container {
-  max-width: 1024px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, #{$product-card-width});
+  gap: 50px 48px;
   justify-content: center;
-
-  &__product {
-    margin-top: 50px;
-    margin-right: 48px;
-  }
-
-  & :nth-child(4n) {
-    margin-right: 0;
-  }
+  padding-top: 50px;
 }
