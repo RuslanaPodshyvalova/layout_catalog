@@ -1,3 +1,5 @@
+$border-color: #f3f3f3;
+
 .product {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   padding-left: 14px;
   padding-right: 14px;
   background: #fff;
-  border: 1px solid #f3f3f3;
+  border: 1px solid #{$border-color};
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
 
@@ -14,8 +16,13 @@
     height: 134px;
     margin: 29px 5px 45px;
     padding: 0;
+    transition: transform 400ms linear;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
   }
-
+ 
   &__code {
     margin-top: 0;
     margin-bottom: 15px;
@@ -62,12 +69,12 @@
 
   /* #region Link */
   &__buy-link {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 40px;
-    background-color: #{$blue-color};
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
@@ -76,6 +83,8 @@
     margin-bottom: 14px;
     border: 1px solid #{$blue-color};
     border-radius: 5px;
+    background-color: #{$blue-color};
+    transition: background-color 400ms linear, color 400ms linear;
   }
 
   &__buy-link:hover {
